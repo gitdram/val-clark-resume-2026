@@ -1,0 +1,110 @@
+body {
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    max-width: 960px;
+    /* margin: auto; */
+    margin-top: 2em;
+    margin-right: 1em;
+    margin-left: 3em;
+    /* padding-bottom: 50px; */
+}
+
+h1, h2 {
+    /* font-weight: 100; */
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: .2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: .5em;
+}
+
+h3 {
+    font-size: 1.0em;
+    margin-top: 0em;
+    /* padding-bottom: em; */
+}
+
+h4 {
+    font-size: 1.25em;
+    margin-top: 2em;
+    margin-bottom: .5em;
+    /* padding-bottom: em; */
+}
+
+header {
+    text-align: center;
+    margin: auto 2em;
+    /* font-variant: small-caps; */
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 2em;
+}
+
+#about {
+    font-size: 1.2em;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-left: 8em;
+    margin-right: 8em;
+}
+
+#contact {
+    margin-left: 3em;
+}
+
+#education {
+    margin-left: 3em;
+}
+
+.columnarticles {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 10px;
+    /* grid-auto-rows: minmax(100px, auto); */
+    grid-template-rows: 200px;
+    /* white-space: nowrap; */
+    margin-top: 1em;
+    margin-left: 3em;
+    list-style-type: none;
+  }
+
+#worksummaryleft {
+    border-right: 3px solid lightgray;
+ }
+
+ #worksummarymid {
+    margin-left: 2em;
+    border-right: 3px solid lightgray;
+ }
+ 
+ #worksummaryright {
+    margin-left: 2em;
+ }
+
+i {
+    margin-right: .5em;
+}
+
+p {
+    margin: .2em auto
+}
+
+hr {
+    border: none;
+    background-color: lightgray;
+    height: 3px;
+}
