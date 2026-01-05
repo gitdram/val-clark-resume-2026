@@ -20,6 +20,8 @@ h1 {
     letter-spacing: .2em;
     padding-top: 1em;
     padding-bottom: 1em;
+    font-variant: small-caps;
+    font-variant-caps: small-caps;
 }
 
 h2 {
@@ -55,7 +57,7 @@ dd {
 }
 
 #about {
-    font-size: 1.2em;
+    font-size: 1.05em;
     text-align: justify;
     text-justify: inter-word;
     margin-left: 8em;
@@ -107,4 +109,121 @@ hr {
     border: none;
     background-color: lightgray;
     height: 3px;
+}
+
+/* two-column layout for CORE COMPETENCIES */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+.two-column ul {
+    /* Align bullet indentation with .responsibilities used in job entries */
+    list-style-position: outside;
+    margin: 0;
+    padding-left: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+.two-column li {
+    margin-bottom: 0.35em;
+}
+
+/* Job entry visual emphasis */
+.job-entry {
+    margin-bottom: 0.75em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+.job-entry .job-role {
+    font-weight: 700;
+    margin-top: 0.25em;
+    margin-bottom: 0.15em;
+}
+.job-entry .job-date {
+    font-style: italic;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 0.95em;
+}
+.job-entry .responsibilities {
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+    padding-left: 1.2em;
+}
+.job-entry .responsibilities li {
+    margin-bottom: 0.35em;
+}
+.job-entry .sre-impact {
+    margin-top: 0.35em;
+    font-style: italic;
+    color: #333;
+}
+
+/* Accent color */
+:root {
+    --accent: #084a9e; /* darker LinkedIn blue */
+}
+
+/* Apply accent to headings, job roles, and links */
+h1, h2, h4 {
+    color: var(--accent);
+}
+
+.job-role {
+    color: var(--accent);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Print-friendly styles */
+@media print {
+    /* Use black accents for reliable printing */
+    :root { --accent: #000; }
+    body {
+        color: #000;
+        background: #fff;
+        font-size: 11px;
+    }
+
+    /* Make links visible in print by appending the URL */
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    a:after {
+        content: " (" attr(href) ")";
+        font-size: 0.9em;
+        color: #333;
+    }
+
+    /* Tighter margins for print */
+    .two-column {
+        gap: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .job-entry {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    #about {
+        font-size: 1.0em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+
+    /* Prevent breaking inside critical blocks */
+    .job-entry, .job-entry * { page-break-inside: avoid; }
+    h1, h2, h3, h4 { color: #000; page-break-after: avoid; }
+    .responsibilities { padding-left: 1.2em; }
 }
