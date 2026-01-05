@@ -195,10 +195,15 @@ a:hover {
         font-size: 11px;
     }
 
-    /* Make links visible in print by appending the URL */
+    /* Make links visible in print by appending the URL (except contact links) */
     a {
         color: #000;
         text-decoration: underline;
+    }
+    /* Don't append URLs for contact links; show only link text in print */
+    #contact a:after {
+        content: "";
+        display: none;
     }
     a:after {
         content: " (" attr(href) ")";
